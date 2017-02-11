@@ -34,7 +34,10 @@ export default class App extends Component {
       <div>
         <h1>TeamFeyonce Postcard Generator</h1>
 
-        < Photo onChange={ this.onPhotoChange } photo={ this.state.photo } />
+        < Photo
+        onChange={ this.onPhotoChange }
+        photo={ this.state.photo }
+        query="sky"/>
         < Poem onChange={ this.onPoemChange } poem={ this.state.poem } />
 
         <button>Generate Postcard</button>
