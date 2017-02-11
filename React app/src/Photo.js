@@ -3,17 +3,9 @@ import axios from 'axios'
 
 export default class Photo extends Component {
 
-  constructor() {
-    super()
-    this.state = {
-      photo: null
-    }
-  }
-
-
-  function getPhotoAPI() {
-    const photoURL = axios.get('/user?ID=12345') // placeholder URL
-    .then( response => this.setState({photo: photoURL}) )
+  getPhotoAPI() {
+    axios.get('/user?ID=12345') // placeholder URL
+    .then( response => this.props.onChange(response) )
   }
 
   render() {
@@ -21,8 +13,18 @@ export default class Photo extends Component {
 
       <div>
         <h2>Hello from the Photo component</h2>
-        <div> { this.state.photo } </div>
+        <div> { this.props.photo } </div>
       </div>
     )
   }
+
+}
+
+Photo.propTypes = {
+  photo: React.PropTypes.string,
+  onChange: React.PropTypes.func
+}
+
+Photo.defaultProps = {
+  photo: "https://media.giphy.com/media/EdnHfe5SWGTm/giphy.gif"
 }

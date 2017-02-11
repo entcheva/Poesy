@@ -4,7 +4,29 @@ import Poem from './Poem'
 
 export default class App extends Component {
 
+  constructor() {
+    super()
 
+    this.state = {
+      photo: null,
+      poem: null
+    }
+
+    this.onPhotoChange = this.onPhotoChange.bind(this)
+    this.onPoemChange = this.onPoemChange.bind(this)
+  }
+
+  onPhotoChange(response) {
+    this.setState({
+     photo: response.url
+    })
+  }
+
+  onPoemChange(response) {
+    this.setState({
+     poem: response.url
+    })
+  }
 
   render() {
     return (
@@ -12,8 +34,8 @@ export default class App extends Component {
       <div>
         <h1>TeamFeyonce Postcard Generator</h1>
 
-        < Photo photo={ this.state.photo } />
-        < Poem poem={ this.state.poem } />
+        < Photo onChange={ this.onPhotoChange } photo={ this.state.photo } />
+        < Poem onChange={ this.onPoemChange } poem={ this.state.poem } />
 
         <button>Generate Postcard</button>
 
