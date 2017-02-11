@@ -6,12 +6,12 @@ import './index.css'
 
 getPoemAPI => {
   const poem = axios.get('/user?ID=12345') // placeholder URL
-  .then( response => response.data) // what should we do with the response?
+  .then( response => poemResponse = poem) // what should we do with the response?
 }
 
 getPhotoAPI => {
   const photo = axios.get('/user?ID=12345') // placeholder URL
-  .then( response => const photoResponse = photo) // what should we do with the response?
+  .then( response => photoResponse = photo) // what should we do with the response?
 }
 
 ReactDOM.render(
