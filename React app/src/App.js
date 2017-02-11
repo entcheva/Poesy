@@ -8,10 +8,10 @@ export default class App extends Component {
     return (
 
       <div>
-        <h1>Hi</h1>
+        <h1>TeamFeyonce Postcard Generator</h1>
         < Photo />
         < Poem />
-        <button>Submit</button>
+        <button>Generate Postcard</button>
       </div>
     )
   }
