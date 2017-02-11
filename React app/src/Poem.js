@@ -3,6 +3,10 @@ import axios from 'axios'
 
 export default class Poem extends Component {
 
+  componentDidMount() {
+    this.getPoemAPI()
+  }
+
   getPoemAPI() {
     axios.get('/user?ID=12345') // placeholder URL
     .then( response => this.props.onChange(response) )

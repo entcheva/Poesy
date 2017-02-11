@@ -3,6 +3,10 @@ import axios from 'axios'
 
 export default class Photo extends Component {
 
+  componentDidMount() {
+    this.getPhotoAPI()
+  }
+
   getPhotoAPI() {
     axios.get('/user?ID=12345') // placeholder URL
     .then( response => this.props.onChange(response) )
