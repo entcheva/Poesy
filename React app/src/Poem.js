@@ -20,7 +20,7 @@ export default class Poem extends Component {
 
 Poem.propTypes = {
   poem: React.PropTypes.string,
-  onChange: React.propTypes.func
+  onChange: React.PropTypes.func
 }
 
 Poem.defaultProps = {

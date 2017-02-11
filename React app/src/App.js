@@ -16,10 +16,6 @@ export default class App extends Component {
     this.onPoemChange = this.onPoemChange.bind(this)
   }
 
-  onChange() {
-
-  }
-
   onPhotoChange(response) {
     this.setState({
      photo: response.url

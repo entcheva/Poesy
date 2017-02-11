@@ -22,7 +22,7 @@ export default class Photo extends Component {
 
 Photo.propTypes = {
   photo: React.PropTypes.string,
-  onChange: React.propTypes.func
+  onChange: React.PropTypes.func
 }
 
 Photo.defaultProps = {
