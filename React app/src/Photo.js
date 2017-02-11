@@ -8,7 +8,7 @@ export default class Photo extends Component {
   }
 
   getPhotoAPI(query) {
-    
+
     axios.get(`http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=${query.split(' ').join('+')}`)
       .then(response => {
         let gif_url = response.data.data.image_url
@@ -23,7 +23,8 @@ export default class Photo extends Component {
 
       <div>
         <h2>Hello from the Photo component</h2>
-        <div> { this.props.photo } </div>
+        <img src={this.props.photo} alt='a beautiful sky'/>
+
       </div>
     )
   }

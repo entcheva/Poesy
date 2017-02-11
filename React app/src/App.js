@@ -18,7 +18,7 @@ export default class App extends Component {
 
   onPhotoChange(response) {
     this.setState({
-     photo: response.url
+     photo: response
     })
   }
 
@@ -40,7 +40,7 @@ export default class App extends Component {
         query="sky"/>
         < Poem onChange={ this.onPoemChange } poem={ this.state.poem } />
 
-        <button>Generate Postcard</button>
+        <button >Generate Postcard</button>
 
       </div>
     )
