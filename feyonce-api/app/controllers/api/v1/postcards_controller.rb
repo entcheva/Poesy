@@ -1,5 +1,5 @@
 module Api::V1
-  class AlbumsController < ApplicationController
+  class PostcardsController < ApplicationController
     def index
       @postcards = Postcard.all
       render json: @postcards
