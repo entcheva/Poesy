@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import Photo from './Photo'
-import Poem from './Poem'
+import React, { Component } from 'react';
+import Photo from './Photo';
+import Poem from './Poem';
+
 
 export default class App extends Component {
 
@@ -30,7 +31,6 @@ export default class App extends Component {
 
   render() {
     return (
-
       <div>
         <h1>TeamFeyonce Postcard Generator</h1>
 
@@ -45,9 +45,7 @@ export default class App extends Component {
         poem={ this.state.poem }
         poemTitle="Ozymandias" />
 
-        <button
-          onClick={ this.refs.photo.getPhotoAPI() }>
-          Generate Postcard</button>
+        <button>Generate Postcard</button>
 
       </div>
     )
