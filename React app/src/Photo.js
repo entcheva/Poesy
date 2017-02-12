@@ -35,7 +35,3 @@ Photo.propTypes = {
   photo: React.PropTypes.string,
   onChange: React.PropTypes.func
 }
-
-Photo.defaultProps = {
-  photo: "https://media.giphy.com/media/EdnHfe5SWGTm/giphy.gif"
-}

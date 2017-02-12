@@ -7,8 +7,8 @@ export default class Poem extends Component {
     this.getPoemAPI()
   }
 
-  getPoemAPI() {
-    axios.get('/user?ID=12345') // placeholder URL
+  getPoemAPI(poemTitle) {
+    axios.get(`http://poetrydb.org/title/${poemTitle}/lines.json`)
     .then( response => this.props.onChange(response) )
   }
 
@@ -25,8 +25,4 @@ export default class Poem extends Component {
 Poem.propTypes = {
   poem: React.PropTypes.string,
   onChange: React.PropTypes.func
-}
-
-Poem.defaultProps = {
-  poem: "yooooo"
 }

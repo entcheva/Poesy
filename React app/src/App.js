@@ -9,7 +9,7 @@ export default class App extends Component {
 
     this.state = {
       photo: null,
-      poem: null
+      poem: ""
     }
 
     this.onPhotoChange = this.onPhotoChange.bind(this)
@@ -24,7 +24,7 @@ export default class App extends Component {
 
   onPoemChange(response) {
     this.setState({
-     poem: response.url
+     poem: response
     })
   }
 
@@ -37,10 +37,17 @@ export default class App extends Component {
         < Photo
         onChange={ this.onPhotoChange }
         photo={ this.state.photo }
-        query="sky"/>
-        < Poem onChange={ this.onPoemChange } poem={ this.state.poem } />
+        query="sky"
+        ref="photo" />
 
-        <button >Generate Postcard</button>
+        < Poem
+        onChange={ this.onPoemChange }
+        poem={ this.state.poem }
+        poemTitle="Ozymandias" />
+
+        <button
+          onClick={ this.refs.photo.getPhotoAPI() }>
+          Generate Postcard</button>
 
       </div>
     )
