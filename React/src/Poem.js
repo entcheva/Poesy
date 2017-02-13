@@ -7,9 +7,15 @@ export default class Poem extends Component {
     this.getPoemAPI()
   }
 
-  getPoemAPI(poemTitle) {
-    axios.get(`http://poetrydb.org/title/${poemTitle}/lines.json`)
-    .then( response => this.props.onChange(response) )
+  getPoemAPI(category) {
+    axios.get(`http://quotes.rest/qod.json?category=${category}`)
+    .then( response => {
+
+      var poemURL = response.data.contents.quotes[0].quote
+      this.props.onChange(poemURL)
+      // json.contents.quotes[0].quote
+
+    })
   }
 
   render() {
